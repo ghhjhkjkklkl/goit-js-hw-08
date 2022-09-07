@@ -11,6 +11,7 @@ feedbackForm.addEventListener('submit', evt => {
     const formData = new FormData(feedbackForm);
     formData.forEach((value, name) => console.log(value, name));
     localStorage.removeItem(STOREGE_KEY);
+    evt.currentTarget.reset();
 });
 
 feedbackForm.addEventListener('input', throttle(evt => {
@@ -22,6 +23,7 @@ feedbackForm.addEventListener('input', throttle(evt => {
 
 feedbackForm.addEventListener('reset', () => {
     localStorage.removeItem(STOREGE_KEY);
+    evt.currentTarget.reset();
 });
 
 function initForm() {
