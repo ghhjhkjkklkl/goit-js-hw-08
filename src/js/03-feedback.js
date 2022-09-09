@@ -21,10 +21,10 @@ feedbackForm.addEventListener('input', throttle(evt => {
     localStorage.setItem(STOREGE_KEY, JSON.stringify(persistedForms));
 }), 500);
 
-feedbackForm.addEventListener('reset', () => {
-    localStorage.removeItem(STOREGE_KEY);
-    evt.currentTarget.reset();
-});
+// feedbackForm.addEventListener('reset', () => {
+//     localStorage.removeItem(STOREGE_KEY);
+//     evt.currentTarget.reset();
+// });
 
 function initForm() {
     let persistedForms = localStorage.getItem(STOREGE_KEY);
