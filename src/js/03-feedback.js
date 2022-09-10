@@ -9,7 +9,7 @@ initForm();
 feedbackForm.addEventListener('submit', evt => {
     evt.preventDefault();
     const formData = new FormData(feedbackForm);
-    formData.forEach((value, name) => console.log(value, name));
+    formData.forEach((value, name) => console.log({value, name}));
     localStorage.removeItem(STOREGE_KEY);
     evt.currentTarget.reset();
 });
